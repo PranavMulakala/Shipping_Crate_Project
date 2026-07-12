@@ -77,9 +77,9 @@ export default function Dashboard() {
                   onClick={() => navigate(`/loads/${l.id}`)}
                   className="cursor-pointer transition-colors hover:bg-slate-50"
                 >
-                  <td className="px-4 py-3 font-medium text-slate-900">{l.id}</td>
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-slate-900">{l.id}</td>
                   <td className="px-4 py-3 text-slate-700">{l.customerName}</td>
-                  <td className="px-4 py-3 text-slate-700">
+                  <td className="whitespace-nowrap px-4 py-3 text-slate-700">
                     {l.originCity}, {l.originState} → {l.destCity}, {l.destState}
                   </td>
                   <td className="px-4 py-3 text-slate-700">{l.equipment}</td>
@@ -88,7 +88,7 @@ export default function Dashboard() {
                   <td className="px-4 py-3">
                     <StatusPill status={l.status} />
                   </td>
-                  <td className="px-4 py-3 text-slate-500">{l.date}</td>
+                  <td className="whitespace-nowrap px-4 py-3 text-slate-500">{l.date}</td>
                 </tr>
               );
             })}
