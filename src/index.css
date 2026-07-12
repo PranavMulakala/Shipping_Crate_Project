@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-100 text-slate-800 antialiased;
+}
+
+/* Print: show only the active document (#print-area). Everything else hidden. */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-area,
+  #print-area * {
+    visibility: visible;
+  }
+  #print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0.4in;
+    box-shadow: none !important;
+    outline: none !important;
+    --tw-ring-shadow: 0 0 #0000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+}
